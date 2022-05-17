@@ -1,0 +1,25 @@
+.c-toggle {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 60px;
+  height: 2rem;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.c-toggle.c-toggle--checked {
+  opacity: 1;
+}
+
+.c-toggle span {
+  transition: all 0.3s;
+  transform: translateX(0);
+}
+
+.c-toggle.c-toggle--checked span {
+  transform: translateX(28px);
+}

@@ -2,9 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* - Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%) */
+
+body {
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  @apply bg-grayish-100;
+}
+
 .sr-only {
   width: 0;
   height: 0;
   overflow: hidden;
   opacity: 0;
+}
+
+main {
+  min-height: 100vh;
+}
+
+main::before {
+  content: url(./assets/bg-top.svg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(50%);
 }
