@@ -12,13 +12,13 @@ export function PricingItem({ active, pricing }) {
 
   return (
     <li
-      className={`p-7 rounded-lg flex flex-col items-center max-w-xs w-full ${
+      className={`p-7 rounded-lg flex flex-col items-center max-w-xs w-full xl:max-w-sm ${
         active
-          ? 'bg-gradient-to-br from-blue-200 to-blue-400 text-white'
+          ? 'bg-gradient-to-br from-blue-200 to-blue-400 text-white xl:py-12'
           : 'bg-white text-grayish-400'
       }`}
     >
-      <span className="text-sm">{pricing.label}</span>
+      <span className="text-base">{pricing.label}</span>
 
       <p
         className={`text-6xl flex items-center mt-9 ${
