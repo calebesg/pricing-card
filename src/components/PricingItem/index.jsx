@@ -3,7 +3,7 @@ export function PricingItem({ active, pricing }) {
     return (
       <li
         key={index}
-        className="border-t border-b border-grayish-200 -mt-px flex justify-center p-5"
+        className="border-t border-grayish-200 -mt-px flex justify-center p-5"
       >
         {item}
       </li>
@@ -12,9 +12,9 @@ export function PricingItem({ active, pricing }) {
 
   return (
     <li
-      className={`p-7 rounded-lg flex flex-col items-center max-w-xs w-full xl:max-w-sm ${
+      className={`p-7 rounded-lg flex flex-col items-center max-w-xs w-full lg:max-w-sm shadow-xl ${
         active
-          ? 'bg-gradient-to-br from-blue-200 to-blue-400 text-white xl:py-12'
+          ? 'bg-gradient-to-br from-blue-200 to-blue-400 text-white lg:py-12'
           : 'bg-white text-grayish-400'
       }`}
     >
@@ -29,7 +29,9 @@ export function PricingItem({ active, pricing }) {
         {pricing.price}
       </p>
 
-      <ul className="mt-10 w-full">{renderFeatureItem}</ul>
+      <ul className="mt-10 w-full border-b border-grayish-200">
+        {renderFeatureItem}
+      </ul>
 
       <button
         type="button"

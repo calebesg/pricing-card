@@ -18,3 +18,17 @@ main::before {
   transform: translateX(50%);
   z-index: -1;
 }
+
+@media (min-width: 1024px) {
+  main::before {
+    transform: translateX(0);
+  }
+
+  main::after {
+    content: url(./assets/bg-bottom.svg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
