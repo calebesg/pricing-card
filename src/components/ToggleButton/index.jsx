@@ -1,8 +1,13 @@
 import { useState } from 'react';
 import './style.css';
 
-export function ToggleButton({ labels }) {
-  const [checked, setChecked] = useState(false);
+export function ToggleButton({ labels, onChange }) {
+  const [checked, setChecked] = useState(true);
+
+  const handleUpdateCheck = function (value) {
+    setChecked(value);
+    onChange(value);
+  };
 
   return (
     <div className="flex items-center gap-6 text-grayish-200 mt-10">
@@ -10,7 +15,7 @@ export function ToggleButton({ labels }) {
 
       <button
         className={`c-toggle ${checked ? 'c-toggle--checked' : ''}`}
-        onClick={() => setChecked(!checked)}
+        onClick={e => handleUpdateCheck(!checked)}
       >
         <span className="w-6 h-6 rounded-full bg-white inline-block"></span>
       </button>
