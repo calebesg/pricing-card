@@ -11,16 +11,17 @@ export function ToggleButton({ labels, onChange }) {
 
   return (
     <div className="flex items-center gap-6 text-grayish-200 mt-10">
-      <label htmlFor="pricing">{labels.left}</label>
+      <span>{labels.left}</span>
 
       <button
+        aria-label={`pricing ${labels.left} / ${labels.right}`}
         className={`c-toggle ${checked ? 'c-toggle--checked' : ''}`}
         onClick={e => handleUpdateCheck(!checked)}
       >
         <span className="w-6 h-6 rounded-full bg-white inline-block"></span>
       </button>
 
-      <label htmlFor="pricing">{labels.right}</label>
+      <span>{labels.right}</span>
     </div>
   );
 }
